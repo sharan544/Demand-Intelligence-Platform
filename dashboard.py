@@ -164,10 +164,9 @@ with st.sidebar:
 # ── HEADER ───────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style='background:#0F2D4A; border-radius:10px; padding:18px 24px; margin-bottom:18px;'>
-  <h2 style='color:white; margin:0; font-size:1.5rem;'>🛰️ Demand Intelligence Platform</h2>
+  <h2 style='color:white; margin:0; font-size:1.5rem;'> Demand Intelligence Platform</h2>
   <p style='color:#B0C4D8; margin:4px 0 0 0; font-size:0.88rem;'>
-    Predicting where consumer demand will emerge in Tier 2 & 3 cities — before the market sees it.
-    &nbsp;|&nbsp; Charlotte, NC Pilot &nbsp;|&nbsp; Uber H3 Resolution 8
+    Charlotte, NC Pilot &nbsp;|&nbsp; Uber H3 Resolution 8
   </p>
 </div>
 """, unsafe_allow_html=True)
