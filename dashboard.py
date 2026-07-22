@@ -131,7 +131,7 @@ scores_df, pred_df, scores_geo, pred_geo = load_data()
 
 # ── SIDEBAR ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 🛰️ Demand Intelligence")
+    st.markdown("###  Demand Intelligence")
     st.markdown("**Charlotte, NC Pilot**")
     st.markdown("---")
 
@@ -274,18 +274,18 @@ with map_col:
         layers=[layer],
         initial_view_state=view,
         tooltip=tooltip,
-        map_style=CARTO_DARK_MAP,  # 👈 No Mapbox key needed! Free street map tile layer.
+        map_style=CARTO_DARK_MAP,  #  No Mapbox key needed! Free street map tile layer.
     ), height=480)
 
     st.markdown("""
     <div class='insight-box'>
-    💡 <b>How to read this map:</b> Green hexagons = high growth potential. Red = low. 
+     <b>How to read this map:</b> Green hexagons = high growth potential. Red = low. 
     Streets, highways, and district boundaries are visible underneath the transparent hex mesh.
     </div>
     """, unsafe_allow_html=True)
 
 with info_col:
-    st.markdown(f"<div class='section-header'>🏆 Top {top_n} Opportunity Zones</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='section-header'> Top {top_n} Opportunity Zones</div>", unsafe_allow_html=True)
 
     top_df = active_df.nlargest(top_n, score_col)[
         ["location_name", "h3_index", "wealth_score", "population_density_score", "commercial_density_score", score_col]
@@ -304,7 +304,7 @@ with info_col:
 
     # Score gauge for top hexagon
     top_score = active_df[score_col].max()
-    st.markdown(f"<div class='section-header' style='margin-top:12px;'>📊 Score Distribution</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='section-header' style='margin-top:12px;'> Score Distribution</div>", unsafe_allow_html=True)
 
     fig_hist = px.histogram(
         filtered_df, x=score_col, nbins=30,
@@ -325,7 +325,7 @@ with info_col:
 
     st.markdown(f"""
     <div class='gap-box'>
-    ⚠️ <b>Data Note:</b> NASA VIIRS resolution is 500m/pixel. Zone-level analysis only — individual asset monitoring requires paid high-res imagery (~$500/mo Planet Labs).
+     <b>Data Note:</b> NASA VIIRS resolution is 500m/pixel. Zone-level analysis only — individual asset monitoring requires paid high-res imagery (~$500/mo Planet Labs).
     </div>
     """, unsafe_allow_html=True)
 
@@ -333,7 +333,7 @@ with info_col:
 # ── CHARTS ROW ───────────────────────────────────────────────────────────────
 if show_charts:
     st.markdown("---")
-    st.markdown("<div class='section-header' style='color:#FFFFFF !important; border-bottom: 2px solid #334155;'>📈 Analytics Deep Dive</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-header' style='color:#FFFFFF !important; border-bottom: 2px solid #334155;'> Analytics Deep Dive</div>", unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
 
@@ -445,7 +445,6 @@ if show_table:
 st.markdown("---")
 st.markdown("""
 <div style='text-align:center; color:#94A3B8; font-size:0.78rem; padding:8px 0;'>
-    Demand Intelligence Platform &nbsp;|&nbsp; Charlotte Pilot &nbsp;|&nbsp;
-    Pipeline: Uber H3 + US Census ACS + OpenStreetMap + NASA VIIRS + Random Forest + FastAPI
+    Demand Intelligence Platform &nbsp;|&nbsp; Charlotte 
 </div>
 """, unsafe_allow_html=True)
