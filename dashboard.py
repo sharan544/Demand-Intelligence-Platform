@@ -224,7 +224,7 @@ filtered_df["fill_color"] = filtered_df["norm"].apply(score_to_color)
 map_col, info_col = st.columns([2, 1])
 
 with map_col:
-    st.markdown(f"<div class='section-header' style='color:#FFFFFF !important; border-bottom: 2px solid #334155;'>🗺️ {view_mode} — Charlotte MSA</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='section-header' style='color:#FFFFFF !important; border-bottom: 2px solid #334155;'> {view_mode} — Charlotte MSA</div>", unsafe_allow_html=True)
 
     # 1. Map Layer: Polygon layer with semi-transparent fill so street map shows through underneath
     layer = pdk.Layer(
